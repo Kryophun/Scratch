@@ -1,8 +1,8 @@
-import * as "./VisibilityFilter"
+import { VisibilityFilter } from  "./VisibilityFilter"
 
-class UIState
+export class UiState
 {
-    constructor(VisibilityFilter currentVisibilityFilter) { this.CurrentVisibilityFilter = currentVisibilityFilter }
+    constructor(visibilityFilter: VisibilityFilter) { this.visibilityFilter = visibilityFilter }
 
-    CurrentVisibilityFilter: VisibilityFilter;
+    readonly visibilityFilter: VisibilityFilter;
 };

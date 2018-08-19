@@ -1,12 +1,12 @@
-import * as  "../VisibilityFilter"
+import { VisibilityFilter } from  "../VisibilityFilter"
 
-interface IAction
+export interface IAction
 {
     type: string;
 }
 
-const ADD_TODO: string = 'ADD_TODO'
-class AddTodo implements IAction
+export const ADD_TODO: string = 'ADD_TODO'
+export class AddTodo implements IAction
 {
     constructor(todoText: string) { this.text = todoText; }
 
@@ -14,14 +14,17 @@ class AddTodo implements IAction
     text: string;
 }
 
-const TOGGLE_TODO: string = 'TOGGLE_TODO'
-class ToggleTodo implements IAction
+export const TOGGLE_TODO: string = 'TOGGLE_TODO'
+export class ToggleTodo implements IAction
 {
+    constructor(indexOfTodo: number) { this.index = indexOfTodo; }
+
     type: string = TOGGLE_TODO;
+    index: number;
 }
 
-const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
-class SetVisibilityFilter implements IAction
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+export class SetVisibilityFilter implements IAction
 {
     constructor(filter: VisibilityFilter) { this.filter = filter; }
 

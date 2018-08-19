@@ -1,7 +1,7 @@
-class Todo
+export class ToDo
 {
     constructor(text: string, completed: boolean) { this.text = text; this.completed = completed; }
 
-    text: string;
-    completed: boolean;    
+    readonly text: string;
+    readonly completed: boolean;    
 }
